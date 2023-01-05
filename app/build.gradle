@@ -50,5 +50,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.14.0'
 
-    
+    // Koin
+    def koin_android_version = "3.3.0"
+    implementation "io.insert-koin:koin-android:$koin_android_version"
 }
