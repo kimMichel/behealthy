@@ -1,7 +1,7 @@
 package com.example.behealthy
 
 import android.app.Application
-import com.example.behealthy.di.appModule
+import com.example.behealthy.shared.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

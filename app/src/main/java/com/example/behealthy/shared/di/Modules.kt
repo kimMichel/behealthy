@@ -1,4 +1,4 @@
-package com.example.behealthy.di
+package com.example.behealthy.shared.di
 
 import org.koin.dsl.module
 
