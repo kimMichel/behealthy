@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- BUTTON -->
+    <style name="widget.Custom.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Custom.Button.Text</item>
+        <item name="android:background">@drawable/background_custom_button</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Button.Text" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_button_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
