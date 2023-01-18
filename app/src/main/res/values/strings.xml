@@ -3,4 +3,9 @@
     <string name="enter">Entrar</string>
     <string name="email">Email</string>
     <string name="password">Senha</string>
+    <string name="Hello">Olá</string>
+
+    <!-- BOTTOM NAVIGATION -->
+    <string name="students">Alunos</string>
+    <string name="workouts">Treinos</string>
 </resources>
