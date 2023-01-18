@@ -3,7 +3,8 @@
     <string name="enter">Entrar</string>
     <string name="email">Email</string>
     <string name="password">Senha</string>
-    <string name="Hello">Olá</string>
+    <string name="hello">Olá</string>
+    <string name="search">Pesquisar</string>
 
     <!-- BOTTOM NAVIGATION -->
     <string name="students">Alunos</string>
