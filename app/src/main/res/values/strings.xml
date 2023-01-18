@@ -5,6 +5,10 @@
     <string name="password">Senha</string>
     <string name="hello">Olá</string>
     <string name="search">Pesquisar</string>
+    <string name="fab_content_desc">Floating Action Button</string>
+
+    <string name="not_have_students_register">Não existem alunos cadastrados no sistema.</string>
+    <string name="do_you_want_register_a_student">Deseja cadastrar um novo aluno?</string>
 
     <!-- BOTTOM NAVIGATION -->
     <string name="students">Alunos</string>
