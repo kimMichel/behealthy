@@ -68,7 +68,7 @@
         android:id="@+id/successLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="@+id/guideLineThree"
         app:layout_constraintStart_toStartOf="@+id/guideLineTwo"

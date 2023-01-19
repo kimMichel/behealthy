@@ -70,7 +70,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:focusable="false"
                 android:hint="@string/email"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +78,10 @@
                 <EditText
                     android:id="@+id/textInputEditTextEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +91,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:focusable="false"
                 android:hint="@string/password"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +100,11 @@
                 <EditText
                     android:id="@+id/textInputEditTextPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:imeOptions="actionDone"
+                    android:maxLength="6"
+                    android:maxLines="1"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
