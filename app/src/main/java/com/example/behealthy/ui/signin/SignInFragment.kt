@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.behealthy.databinding.FragmentSigninBinding
 
-class SignInFragment: Fragment() {
+class SignInFragment : Fragment() {
 
     private lateinit var binding: FragmentSigninBinding
 
@@ -19,5 +19,4 @@ class SignInFragment: Fragment() {
         binding = FragmentSigninBinding.inflate(inflater, container, false)
         return binding.root
     }
-
 }

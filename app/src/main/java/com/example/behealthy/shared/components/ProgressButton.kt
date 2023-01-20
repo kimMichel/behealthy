@@ -67,7 +67,10 @@ class ProgressButton @JvmOverloads constructor(
     }
 
     fun getAtributes(attrs: AttributeSet?) = context.theme.obtainStyledAttributes(
-        attrs, R.styleable.ProgressButton, 0, 0
+        attrs,
+        R.styleable.ProgressButton,
+        0,
+        0
     ).apply {
         buttonText = getString(R.styleable.ProgressButton_textButton).toString()
         isGray = getBoolean(R.styleable.ProgressButton_isBackgroundGray, isGray)
@@ -79,8 +82,11 @@ class ProgressButton @JvmOverloads constructor(
 
     private fun setBackgroundButton(isGray: Boolean) = with(binding) {
         binding.buttonProgress.background =
-            if (isGray) ResourcesCompat.getDrawable(resources, R.drawable.background_custom_button_gray, null)
-            else ResourcesCompat.getDrawable(resources, R.drawable.background_custom_button, null)
+            if (isGray) {
+                ResourcesCompat.getDrawable(resources, R.drawable.background_custom_button_gray, null)
+            } else {
+                ResourcesCompat.getDrawable(resources, R.drawable.background_custom_button, null)
+            }
     }
 
     private fun setLoadingState() = with(binding) {
@@ -90,7 +96,7 @@ class ProgressButton @JvmOverloads constructor(
         progressButton.visibility = View.VISIBLE
     }
 
-    private fun clearLoading(){
+    private fun clearLoading() {
         setText(buttonText)
         setButtonEnable(true)
         with(binding) {

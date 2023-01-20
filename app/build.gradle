@@ -3,14 +3,18 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+configurations {
+    ktlint
+}
+
 android {
     namespace 'com.example.behealthy'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.behealthy"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -45,6 +49,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
+    ktlint "com.pinterest:ktlint:0.48.1"
+
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
@@ -57,4 +63,20 @@ dependencies {
     // Navigation
     def nav_version = "2.5.3"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
+}
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style"
+    main = "com.pinterest.ktlint.Main"
+    classpath = configurations.ktlint
+    args "src/**/*.kt"
+}
+
+preBuild.dependsOn "ktlint"
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    main = "com.pinterest.ktlint.Main"
+    classpath = configurations.ktlint
+    args "-F", "src/**/*.kt"
 }
