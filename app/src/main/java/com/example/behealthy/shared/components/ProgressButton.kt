@@ -12,11 +12,13 @@ import com.example.behealthy.databinding.LayoutProgressButtonBinding
 class ProgressButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
-): ConstraintLayout(context, attrs, defStyleAttr){
+    defStyleAttr: Int = 0,
+) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var binding = LayoutProgressButtonBinding.inflate(
-        LayoutInflater.from(context), this, true
+        LayoutInflater.from(context),
+        this,
+        true,
     )
 
     private var buttonText = ""
@@ -60,9 +62,11 @@ class ProgressButton @JvmOverloads constructor(
 
     fun setButtonEnable(buttonsEnable: Boolean) = with(binding) {
         buttonProgress.isEnabled = buttonsEnable
-        val color = if (buttonsEnable && !isTextBlack) enableTextColor
-        else if (buttonsEnable && isTextBlack) resources.getColor(R.color.black)
-        else disableTextColor
+        val color = if (buttonsEnable && !isTextBlack) {
+            enableTextColor
+        } else if (buttonsEnable && isTextBlack) {
+            resources.getColor(R.color.black)
+        } else { disableTextColor }
         buttonText.setTextColor(color)
     }
 
@@ -70,7 +74,7 @@ class ProgressButton @JvmOverloads constructor(
         attrs,
         R.styleable.ProgressButton,
         0,
-        0
+        0,
     ).apply {
         buttonText = getString(R.styleable.ProgressButton_textButton).toString()
         isGray = getBoolean(R.styleable.ProgressButton_isBackgroundGray, isGray)
